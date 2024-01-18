@@ -3,11 +3,12 @@ package no.hvl.data102.filmarkiv.impl;
 import java.lang.System.Logger.Level;
 
 public class Film {
-	private int filmnr;
+	protected int filmnr;
 	private String produsent;
 	private String tittel;
 	private int aar;
 //Sjangrane går her
+//private Sjanger sjanger = Sjanger;
 	private String filmselskapnamn;
 	
 	public Film() {

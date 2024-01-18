@@ -1,12 +1,13 @@
 package no.hvl.data102.filmarkiv.adt;
 
+
 public interface FilmarkivADT {
 		/**
 		* Hente en film med gitt nr fra arkivet
 		* @param nr nummer på film som skal hentes.
 		* @return film med gitt nr. Om nr ikke finnes, returneres null.
 		*/
-		Film finnFilm(int nr);
+		Film finnFilm(int nr;
 		/**
 		* Legger til en ny film.
 		* @param nyFilm
@@ -41,4 +42,3 @@ public interface FilmarkivADT {
 		*/
 		int antall();
 		}
-}
