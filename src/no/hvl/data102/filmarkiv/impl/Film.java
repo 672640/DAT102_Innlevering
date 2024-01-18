@@ -1,18 +1,20 @@
 package no.hvl.data102.filmarkiv.impl;
 
-import java.lang.System.Logger.Level;
-
 public class Film {
 	protected int filmnr;
 	private String produsent;
 	private String tittel;
 	private int aar;
-//Sjangrane går her
-//private Sjanger sjanger = Sjanger;
+	public enum Sjanger {
+		KRIM,
+		HORROR,
+		DRAMA,
+		SCIFI;
+	}
 	private String filmselskapnamn;
 	
 	public Film() {
-		Film film1 = new Film();
+		
 	}
 	
 	public Film(int filmnr, String produsent, String tittel, int aar, String filmselskapnamn) {
@@ -50,6 +52,7 @@ public class Film {
 	}
 	public void setAar(int aar) {
 		this.aar = aar;
+		
 	}
 //Filmselskapnamn
 	public String getFilmselskapnamn() {
@@ -58,7 +61,4 @@ public class Film {
 	public void setFilmselskapnamn(String filmselskapnamn) {
 		this.filmselskapnamn = filmselskapnamn;
 	}
-	
-	
-	
 }
