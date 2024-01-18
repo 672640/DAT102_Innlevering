@@ -1,10 +1,13 @@
 package no.hvl.data102.filmarkiv.impl;
 
+import java.lang.System.Logger.Level;
+
 public class Film {
 	private int filmnr;
 	private String produsent;
 	private String tittel;
 	private int aar;
+//Sjangrane går her
 	private String filmselskapnamn;
 	
 	public Film() {
@@ -12,7 +15,12 @@ public class Film {
 	}
 	
 	public Film(int filmnr, String produsent, String tittel, int aar, String filmselskapnamn) {
-		Film film2 = new Film(this.filmnr = filmnr, this.produsent = produsent, this.tittel = tittel, this.aar = aar, this.filmselskapnamn = filmselskapnamn);
+		//Film film2 = new Film(this.filmnr = filmnr, this.produsent = produsent, this.tittel = tittel, this.aar = aar, this.filmselskapnamn = filmselskapnamn);
+		this.filmnr = filmnr;
+		this.produsent = produsent;
+		this.tittel = tittel;
+		this.aar = aar;
+		this.filmselskapnamn = filmselskapnamn;
 	}
 //Filmnr
 	public int getFilmnr() {
