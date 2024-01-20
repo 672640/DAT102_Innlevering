@@ -1,10 +1,6 @@
 package no.hvl.data102.filmarkiv.adt;
-
-<<<<<<< Updated upstream
-=======
 import no.hvl.data102.filmarkiv.impl.Film;
-import no.hvl.data102.filmarkiv.impl.Sjanger;
->>>>>>> Stashed changes
+import no.hvl.data102.filmarkiv.impl.Film.Sjanger;
 
 public interface FilmarkivADT {
 		/**
@@ -12,7 +8,7 @@ public interface FilmarkivADT {
 		* @param nr nummer på film som skal hentes.
 		* @return film med gitt nr. Om nr ikke finnes, returneres null.
 		*/
-		Film finnFilm(int nr;
+		Film finnFilm(int nr);
 		/**
 		* Legger til en ny film.
 		* @param nyFilm
