@@ -1,5 +1,10 @@
 package no.hvl.data102.filmarkiv.adt;
 
+<<<<<<< Updated upstream
+=======
+import no.hvl.data102.filmarkiv.impl.Film;
+import no.hvl.data102.filmarkiv.impl.Sjanger;
+>>>>>>> Stashed changes
 
 public interface FilmarkivADT {
 		/**

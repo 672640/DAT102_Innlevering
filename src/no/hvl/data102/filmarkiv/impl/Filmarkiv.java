@@ -1,5 +1,6 @@
 package no.hvl.data102.filmarkiv.impl;
 
+<<<<<<< Updated upstream
 public class Filmarkiv {
 	String[] arkivFilm;
 	public Filmarkiv(int talFilmar) {
@@ -7,4 +8,8 @@ public class Filmarkiv {
 	}
 	
 	
+=======
+public class Filmarkiv implements filmarkivADT {
+	Film finnFilm(int nr);
+>>>>>>> Stashed changes
 }
