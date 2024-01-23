@@ -5,12 +5,6 @@ public class Film {
 	private String produsent;
 	private String tittel;
 	private int aar;
-	public enum Sjanger {
-		KRIM,
-		HORROR,
-		DRAMA,
-		SCIFI;
-	}
 	private String filmselskapnamn;
 	
 	public Film() {
