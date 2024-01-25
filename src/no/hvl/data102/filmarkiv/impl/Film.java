@@ -9,7 +9,7 @@ public class Film {
 	private int aar;
 	private Sjanger sjanger;
 	private String filmselskapnamn;
-	
+
 	public Film() {
 		
 	}
@@ -66,16 +66,24 @@ public class Film {
 	public Sjanger getSjanger() {
 		return this.sjanger;
 	}
-	
-	public boolean like(Object o) {
-		if(this == o) {
-			return true;
-		}
-		if(o == null || getClass() != o.getClass()) {
-			return false;
-		}
-		Film film = (Film) o;
-		return filmnr = film.filmnr;
-		
+	@Override
+	public int hashCode() {
+		return Objects.hash(aar, filmnr, filmselskapnamn, produsent, sjanger, tittel);
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Film other = (Film) obj;
+		return aar == other.aar && filmnr == other.filmnr && Objects.equals(filmselskapnamn, other.filmselskapnamn)
+				&& Objects.equals(produsent, other.produsent) && sjanger == other.sjanger
+				&& Objects.equals(tittel, other.tittel);
+	}
+	
+	
 }
