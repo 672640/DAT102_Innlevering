@@ -1,22 +1,50 @@
 package no.hvl.data102.filmarkiv.impl;
-public class Filmarkiv implements no.hvl.data102.filmarkiv.adt.FilmarkivADT {
-	String[] arkivFilm;
-	public Filmarkiv(int talFilmar) {
-		String[] arkivFilm = new String[talFilmar];
+
+import no.hvl.data102.filmarkiv.adt.FilmarkivADT;
+
+public class Filmarkiv implements FilmarkivADT {
+	private Film[] arkivFilm;
+	private int antall;
+	
+	public Filmarkiv() {
+		this.arkivFilm=new Film[10];
+		this.antall=0;
 	}
+	public Filmarkiv(int antall) {
+		this.arkivFilm=new Film[antall];
+	}
+
 	@Override
 	public Film finnFilm(int nr) {
-		// TODO Auto-generated method stub
+		for(int i = 0; i < arkivFilm.length; i++) {
+			if(this.arkivFilm[i].filmnr==nr) 
+				return this.arkivFilm[i];
+		}
 		return null;
 	}
 	@Override
 	public void leggTilFilm(Film nyFilm) {
-		// TODO Auto-generated method stub
-		
+		if(antall >= this.arkivFilm.length) {
+			System.out.println("Ikkje noko plass til fleire filmar.");
+		}
+		else {
+			this.arkivFilm[antall] = nyFilm;
+			antall++;
+		}
 	}
 	@Override
 	public boolean slettFilm(int filmnr) {
-		// TODO Auto-generated method stub
+		for(int i = 0; i < this.arkivFilm.length; i++) {
+			if(this.arkivFilm[i].filmnr == filmnr) {
+				Film film = this.arkivFilm[i];
+			this.arkivFilm[i] = this.arkivFilm[antall -1];
+		this.arkivFilm[i] = film;
+		this.arkivFilm[antall-1]=null;
+		antall--;
+		return true;
+			}
+		}
+		
 		return false;
 	}
 	@Override
@@ -26,7 +54,7 @@ public class Filmarkiv implements no.hvl.data102.filmarkiv.adt.FilmarkivADT {
 	}
 	@Override
 	public Film[] soekProdusent(String delstreng) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 	@Override
