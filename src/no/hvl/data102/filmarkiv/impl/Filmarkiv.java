@@ -80,7 +80,7 @@ public class Filmarkiv implements FilmarkivADT {
 		for(int i = 0; i < this.arkivFilm.length; i++) {
 			if(this.arkivFilm[i].getSjanger().equals(sjanger) && antall > 0) {
 				for(Sjanger sjanger1: Sjanger.values()) {
-					
+					antall++;
 				}
 				return antall;
 			} else {
