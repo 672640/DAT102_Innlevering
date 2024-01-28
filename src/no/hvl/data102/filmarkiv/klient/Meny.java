@@ -2,8 +2,6 @@ package no.hvl.data102.filmarkiv.klient;
 
 import no.hvl.data102.filmarkiv.impl.*;
 import no.hvl.data102.filmarkiv.adt.FilmarkivADT;
-import no.hvl.data102.filmarkiv.klient.*;
-import no.hvl.data102.filmarkiv.test.FilmarkivTest;
 
 public class Meny {
     private Tekstgrensesnitt tekstgr;

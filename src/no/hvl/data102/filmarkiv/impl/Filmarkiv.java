@@ -19,7 +19,7 @@ public class Filmarkiv implements FilmarkivADT {
 	@Override
 	public Film finnFilm(int nr) {
 		for(int i = 0; i < arkivFilm.length; i++) {
-			if(this.arkivFilm[i].filmnr==nr) 
+			if(this.arkivFilm[i].filmnr==nr)
 				return this.arkivFilm[i];
 		}
 		return null;
@@ -44,7 +44,6 @@ public class Filmarkiv implements FilmarkivADT {
 				return true;
 			}
 		}
-		
 		return false;
 	}
 	@Override

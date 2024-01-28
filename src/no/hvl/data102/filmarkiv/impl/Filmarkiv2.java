@@ -1,22 +1,13 @@
-//Utgangspunkt i klassene frå førre oppgåve
-//Implementer klassen Filmarkiv på ny måte
-//Definer Filmarkiv2 med samme operasjonar & returtypar som Oppg 1
-//Skal lagrast i lineært kjeda struktur/ikkje tabell
-//Fleire metodar få ny implementasjon
-//Metodane skal ha namn, parametertype og returtype som i interfacet.
-//FilmarkivADT samme som i Oppg1.
-
-//Denne klassen: Ikkje endrast frå oppg1.
-
 package no.hvl.data102.filmarkiv.impl;
 import java.util.*;
 import org.w3c.dom.*;
-//Fekk ikkje til å importere denne, men vi antar at eg klarte å implementere den.
+//Fekk ikkje til å importere org.w3c.dom, men vi antar at eg klarte å implementere den.
 import java.util.Arrays;
 import no.hvl.data102.filmarkiv.adt.*;
 import no.hvl.data102.filmarkiv.impl.*;
 import no.hvl.data102.filmarkiv.klient.*;
 import no.hvl.data102.filmarkiv.adt.FilmarkivADT;
+//Fekk ikkje til å importere org.w3c.dom, men vi antar at eg klarte å implementere den.
 public class Filmarkiv2 implements FilmarkivADT {
 	private int antall;
 	private LinearNode<Film> start;

@@ -1,11 +1,8 @@
 package no.hvl.data102.filmarkiv.klient;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 import no.hvl.data102.filmarkiv.impl.*;
 import no.hvl.data102.filmarkiv.adt.FilmarkivADT;
-import no.hvl.data102.filmarkiv.klient.*;
 
 public class Tekstgrensesnitt {
 	

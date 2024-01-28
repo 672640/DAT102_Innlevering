@@ -1,8 +1,7 @@
 package no.hvl.data102.filmarkiv.test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 import no.hvl.data102.filmarkiv.impl.*;
@@ -55,7 +54,9 @@ public class FilmarkivTest {
 	public void slettFilmtest() {
 		setUp();
 		filmarkiv.slettFilm(1);
-		assertTrue(filmarkiv.finnFilm(1)==null);
+		assertNull(filmarkiv.finnFilm(1));
 		assertEquals(filmarkiv.antall(),2);
 	}
+//Denne testen (slettFilmtest()) fungerte da vi testa den før vi gjorde oppgåve 2, men etterpå, så slutta den å fungere og vi fann ikkje ut at korfor,
+//til og med etter å ha commenta vekk all koden i oppgåve 2-klassene.
 }
