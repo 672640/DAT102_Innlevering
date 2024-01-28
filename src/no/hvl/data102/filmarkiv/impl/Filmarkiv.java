@@ -1,5 +1,7 @@
 package no.hvl.data102.filmarkiv.impl;
 
+import java.util.Arrays;
+
 import no.hvl.data102.filmarkiv.adt.FilmarkivADT;
 
 public class Filmarkiv implements FilmarkivADT {
@@ -12,6 +14,7 @@ public class Filmarkiv implements FilmarkivADT {
 	}
 	public Filmarkiv(int antall) {
 		this.arkivFilm=new Film[antall];
+		this.antall=0;
 	}
 
 	@Override
@@ -34,14 +37,12 @@ public class Filmarkiv implements FilmarkivADT {
 	}
 	@Override
 	public boolean slettFilm(int filmnr) {
-		for(int i = 0; i < this.arkivFilm.length; i++) {
+		for(int i = 0; i < antall; i++) {
 			if(this.arkivFilm[i].filmnr == filmnr) {
-				Film film = this.arkivFilm[i];
-			this.arkivFilm[i] = this.arkivFilm[antall -1];
-		this.arkivFilm[i] = film;
-			this.arkivFilm[antall-1]=null;
+				this.arkivFilm[i] = this.arkivFilm[antall -1];
+				this.arkivFilm[antall-1]=null;
 				antall--;
-			return true;
+				return true;
 			}
 		}
 		
@@ -49,48 +50,40 @@ public class Filmarkiv implements FilmarkivADT {
 	}
 	@Override
 	public Film[] soekTittel(String delstreng) {
-		Film[] arkivFilm2 = new Film[this.arkivFilm.length * 2];
-		for(int i = 0; i < this.arkivFilm.length; i++) {
-			if(this.arkivFilm[i].getTittel().contentEquals(delstreng)) {
-				for(int j = 0; j < arkivFilm2.length; j++) {
-					arkivFilm2 = new Film[j];
-				}
-				return arkivFilm2;
+		Film[] arkivFilm2 = new Film[this.arkivFilm.length];
+		int j=0;
+		for(int i = 0; i < this.antall; i++) {
+			if(this.arkivFilm[i].getTittel().contains(delstreng)) {
+					arkivFilm2[j] = this.arkivFilm[i];
+					j++;
 			}
 		}
-		return null;
+		return Arrays.copyOf(arkivFilm2, j);
 	}
 	@Override
 	public Film[] soekProdusent(String delstreng) {
-		Film[] arkivFilm2 = new Film[this.arkivFilm.length * 2];
-		for(int i = 0; i < this.arkivFilm.length; i++) {
-			if(this.arkivFilm[i].getProdusent().contentEquals(delstreng)) {
-				for(int j = 0; j < arkivFilm2.length; j++) {
-					arkivFilm2 = new Film[j];
-					antall++;
-				}
-				return arkivFilm2;
+		Film[] arkivFilm2 = new Film[this.arkivFilm.length];
+		int j=0;
+		for(int i = 0; i < this.antall; i++) {
+			if(this.arkivFilm[i].getProdusent().contains(delstreng)) {
+					arkivFilm2[j] = this.arkivFilm[i];
+					j++;
 			}
 		}
-		return null;
+		return Arrays.copyOf(arkivFilm2, j);
 	}
 	@Override
 	public int antall(Sjanger sjanger) {
-		int antall = 0;
-		for(int i = 0; i < this.arkivFilm.length; i++) {
-			if(this.arkivFilm[i].getSjanger().equals(sjanger) && antall > 0) {
-				for(Sjanger sjanger1: Sjanger.values()) {
-					antall++;
-				}
-				return antall;
-			} else {
-				antall++;
-			}
+		int x = 0;
+		for(int i = 0; i < this.antall; i++) {
+			if(this.arkivFilm[i].getSjanger()==sjanger) 
+				x++;
+
 		}
-		return 0;
+		return x;
 	}
 	@Override
 	public int antall() {
-		return this.arkivFilm.length;
+		return this.antall;
 	}
 }
