@@ -5,7 +5,7 @@ import java.util.Objects;
 import no.hvl.data102.filmarkiv.test.*;
 
 public class Film {
-	private int filmnr;
+	protected int filmnr;
 	private String produsent;
 	private String tittel;
 	private int aar;

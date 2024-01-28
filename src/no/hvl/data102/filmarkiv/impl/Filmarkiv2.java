@@ -17,7 +17,7 @@ public class Filmarkiv2 implements FilmarkivADT {
 	
 	@Override
 	public Film finnFilm(int nr) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 	@Override
