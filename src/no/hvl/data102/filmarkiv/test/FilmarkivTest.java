@@ -4,11 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
-
 import no.hvl.data102.filmarkiv.impl.*;
-
 
 public class FilmarkivTest {
 	
@@ -61,5 +58,4 @@ public class FilmarkivTest {
 		assertTrue(filmarkiv.finnFilm(1)==null);
 		assertEquals(filmarkiv.antall(),2);
 	}
-
 }

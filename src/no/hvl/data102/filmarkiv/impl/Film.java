@@ -91,6 +91,4 @@ public class Film {
 				&& Objects.equals(produsent, other.produsent) && sjanger == other.sjanger
 				&& Objects.equals(tittel, other.tittel);
 	}
-	
-	
 }

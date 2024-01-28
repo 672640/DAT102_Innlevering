@@ -3,14 +3,13 @@ package no.hvl.data102.filmarkiv.klient;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-
 import no.hvl.data102.filmarkiv.impl.*;
 import no.hvl.data102.filmarkiv.adt.FilmarkivADT;
 import no.hvl.data102.filmarkiv.klient.*;
 
 public class Tekstgrensesnitt {
-
-    // Leser inn opplysninger om en film fra tastatur og returnere et Film-objekt
+	
+// Leser inn opplysninger om en film fra tastatur og returnere et Film-objekt
     public Film lesFilm(){
         Scanner keyboard = new Scanner(System.in);
         int filmnr = keyboard.nextInt();
@@ -29,9 +28,8 @@ public class Tekstgrensesnitt {
         }
         keyboard.close();
         return new Film(filmnr,produsent,tittel,aar,filmselskapnamn,Sjanger.KRIM);
-
     }
-    // Skriver ut en film med alle opplysninger på skjerm (husk tekst for sjanger)
+    // Skriver ut en film med alle opplysninger på skjermen
     public void skrivUtFilm(Film film) {
         System.out.println(film.toString());
     }
@@ -41,9 +39,8 @@ public class Tekstgrensesnitt {
         for (int i = 0; i < list.length; i++) {
             System.out.println(list[i].toString());
         }
-
     }
-    // Skriver ut alle Filmer av en produsent (produsent er delstreng)
+// Skriver ut alle Filmer av en produsent (produsent er delstreng)
     public void skrivUtFilmProdusent(FilmarkivADT arkiv, String delstreng) {
         Film[] list = arkiv.soekProdusent(delstreng);
         for (int i = 0; i < list.length; i++) {
@@ -57,5 +54,4 @@ public class Tekstgrensesnitt {
         System.out.println("HORROR:" + arkiv.antall(Sjanger.HORROR));
         System.out.println("KRIM:" + arkiv.antall(Sjanger.KRIM));
     }
-    // osv ... andre metoder
 }
