@@ -1,16 +1,25 @@
 package no.hvl.data102.filmarkiv.klient;
 
+import java.util.ArrayList;
 import java.util.Scanner;
-import no.hvl.data102.filmarkiv.klient.*;
+
 import no.hvl.data102.filmarkiv.impl.*;
 import no.hvl.data102.filmarkiv.adt.FilmarkivADT;
-import no.hvl.data102.filmarkiv.impl.Film;
+import no.hvl.data102.filmarkiv.klient.*;
 
 public class Tekstgrensesnitt {
 	
+	// Leser inn opplysninger om en film fra tastatur og returnere et Film-objekt
 	public Film lesFilm(){
-		return null;
-	// TODO
+		Scanner keyboard = new Scanner(System.in);
+		int filmnr = keyboard.nextInt();
+		String produsent = keyboard.next();
+		String tittel = keyboard.next();
+		int aar = keyboard.nextInt();
+		String filmselskapnamn = keyboard.next();
+		String check = keyboard.next();
+		if(check.toUpperCase()==HORROR)
+			Sjanger sjanger = new Sjanger.HORROR;
 	}
 	// Skriver ut en film med alle opplysninger på skjerm (husk tekst for sjanger)
 	public void skrivUtFilm(Film film) {
@@ -31,3 +40,4 @@ public class Tekstgrensesnitt {
 	}
 	// osv ... andre metoder
 }
+

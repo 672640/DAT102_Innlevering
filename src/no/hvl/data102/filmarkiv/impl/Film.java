@@ -2,6 +2,8 @@ package no.hvl.data102.filmarkiv.impl;
 
 import java.util.Objects;
 
+import no.hvl.data102.filmarkiv.test.*;
+
 public class Film {
 	protected int filmnr;
 	private String produsent;
@@ -11,7 +13,12 @@ public class Film {
 	private String filmselskapnamn;
 
 	public Film() {
-		
+		this.filmnr = 0;
+		this.produsent = null;
+		this.tittel = null;
+		this.aar = 0;
+		this.filmselskapnamn = null;
+		this.sjanger = null;
 	}
 	
 	public Film(int filmnr, String produsent, String tittel, int aar, String filmselskapnamn, Sjanger sjanger) {
